@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Digitizer</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        #toolbar {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #canvas-container {
+            position: relative;
+            overflow: auto;
+            background: white;
+            border: 1px solid #ccc;
+            display: inline-block;
+            max-width: 100%;
+        }
+        canvas {
+            display: block;
+            cursor: crosshair;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .instructions {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .instructions p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="toolbar">
+    <button id="export-btn">Export JSON</button>
+    <div class="instructions">
+        <p><strong>Shift + Click:</strong> Create a Node. You will be prompted for an ID.</p>
+        <p><strong>Alt/Option + Click:</strong> Connect two nodes to create an Edge. Click the first node to highlight it, then click the second node to create a line.</p>
+    </div>
+</div>
+
+<div id="canvas-container">
+    <canvas id="map-canvas"></canvas>
+</div>
+
+<script>
+    const canvas = document.getElementById('map-canvas');
+    const ctx = canvas.getContext('2d');
+    const exportBtn = document.getElementById('export-btn');
+
+    let img = new Image();
+    img.src = '../assets/img/lvl4map.jpg';
+
+    let nodes = [];
+    let edges = [];
+    let selectedNodeForEdge = null;
+
+    img.onload = () => {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        draw();
+    };
+
+    // In case the image is not yet in the repo as mentioned, set default dimensions
+    img.onerror = () => {
+        console.warn("Image not found, setting default canvas size. Ensure the image is added to ../assets/img/lvl4map.jpg");
+        canvas.width = 800;
+        canvas.height = 600;
+        draw();
+
+        // Draw placeholder text
+        ctx.fillStyle = '#aaa';
+        ctx.font = '20px sans-serif';
+        ctx.fillText('Floor plan image not loaded (../assets/img/lvl4map.jpg)', 20, 40);
+    };
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw image
+        if (img.complete && img.naturalWidth !== 0) {
+            ctx.drawImage(img, 0, 0);
+        } else if (!img.complete || img.naturalWidth === 0) {
+            // Draw placeholder text if needed
+            ctx.fillStyle = '#aaa';
+            ctx.font = '20px sans-serif';
+            ctx.fillText('Floor plan image not loaded (../assets/img/lvl4map.jpg)', 20, 40);
+        }
+
+        // Draw edges
+        edges.forEach(edge => {
+            const n1 = nodes.find(n => n.id === edge.node1);
+            const n2 = nodes.find(n => n.id === edge.node2);
+            if (n1 && n2) {
+                ctx.beginPath();
+                ctx.moveTo(n1.x, n1.y);
+                ctx.lineTo(n2.x, n2.y);
+                ctx.strokeStyle = 'red';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        });
+
+        // Draw nodes
+        nodes.forEach(node => {
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 5, 0, 2 * Math.PI);
+            ctx.fillStyle = (selectedNodeForEdge && selectedNodeForEdge.id === node.id) ? 'yellow' : 'blue';
+            ctx.fill();
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Draw ID text
+            ctx.fillStyle = 'black';
+            ctx.font = '14px sans-serif';
+            // Simple white outline for better text visibility
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = 'white';
+            ctx.strokeText(node.id, node.x + 8, node.y + 4);
+            ctx.fillText(node.id, node.x + 8, node.y + 4);
+        });
+    }
+
+    // Helper to find clicked node
+    function getClickedNode(x, y) {
+        return nodes.find(node => {
+            const dx = node.x - x;
+            const dy = node.y - y;
+            return Math.sqrt(dx*dx + dy*dy) <= 12; // 12px click radius for easier clicking
+        });
+    }
+
+    canvas.addEventListener('click', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        // Calculate coordinates properly handling potential CSS scaling
+        const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+        const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+
+        if (e.shiftKey) {
+            // Node Creation
+            const nodeId = prompt("Enter Node ID (e.g., Room 412):");
+            if (nodeId) {
+                // Ensure ID is unique
+                if (nodes.find(n => n.id === nodeId)) {
+                    alert("Node ID already exists!");
+                    return;
+                }
+                nodes.push({ id: nodeId, x: Math.round(x), y: Math.round(y) });
+                selectedNodeForEdge = null; // Reset edge selection
+                draw();
+            }
+        } else if (e.altKey) {
+            // Edge Creation
+            const clickedNode = getClickedNode(x, y);
+            if (clickedNode) {
+                if (!selectedNodeForEdge) {
+                    selectedNodeForEdge = clickedNode;
+                } else {
+                    if (selectedNodeForEdge.id !== clickedNode.id) {
+                        // Create edge
+                        const dx = selectedNodeForEdge.x - clickedNode.x;
+                        const dy = selectedNodeForEdge.y - clickedNode.y;
+                        const distance = Math.round(Math.sqrt(dx*dx + dy*dy));
+
+                        // Check if edge already exists
+                        const edgeExists = edges.some(edge =>
+                            (edge.node1 === selectedNodeForEdge.id && edge.node2 === clickedNode.id) ||
+                            (edge.node1 === clickedNode.id && edge.node2 === selectedNodeForEdge.id)
+                        );
+
+                        if (!edgeExists) {
+                            edges.push({
+                                node1: selectedNodeForEdge.id,
+                                node2: clickedNode.id,
+                                distance: distance
+                            });
+                        }
+                    }
+                    // Clear selection after connecting or clicking same node again
+                    selectedNodeForEdge = null;
+                }
+                draw();
+            }
+        } else {
+            // Clicked without modifiers, clear selection
+            selectedNodeForEdge = null;
+            draw();
+        }
+    });
+
+    exportBtn.addEventListener('click', () => {
+        const data = {
+            nodes: nodes,
+            edges: edges
+        };
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
+        const downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", "map_data.json");
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+    });
+</script>
+
+</body>
+</html>
