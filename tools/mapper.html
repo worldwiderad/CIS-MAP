@@ -73,31 +73,18 @@
     const ctx = canvas.getContext('2d');
     const exportBtn = document.getElementById('export-btn');
 
-    let img = new Image();
-    img.src = '../assets/img/lvl4map.jpg';
-
     let nodes = [];
     let edges = [];
     let selectedNodeForEdge = null;
 
+    let img = new Image();
     img.onload = () => {
         canvas.width = img.width;
         canvas.height = img.height;
         draw();
     };
 
-    // In case the image is not yet in the repo as mentioned, set default dimensions
-    img.onerror = () => {
-        console.warn("Image not found, setting default canvas size. Ensure the image is added to ../assets/img/lvl4map.jpg");
-        canvas.width = 800;
-        canvas.height = 600;
-        draw();
-
-        // Draw placeholder text
-        ctx.fillStyle = '#aaa';
-        ctx.font = '20px sans-serif';
-        ctx.fillText('Floor plan image not loaded (../assets/img/lvl4map.jpg)', 20, 40);
-    };
+    img.src = '../assets/img/lvl4map.jpg';
 
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -105,11 +92,6 @@
         // Draw image
         if (img.complete && img.naturalWidth !== 0) {
             ctx.drawImage(img, 0, 0);
-        } else if (!img.complete || img.naturalWidth === 0) {
-            // Draw placeholder text if needed
-            ctx.fillStyle = '#aaa';
-            ctx.font = '20px sans-serif';
-            ctx.fillText('Floor plan image not loaded (../assets/img/lvl4map.jpg)', 20, 40);
         }
 
         // Draw edges
