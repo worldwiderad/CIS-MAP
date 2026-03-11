@@ -18,18 +18,15 @@
 
     <div class="controls-overlay">
         <div class="control-group">
-            <label for="start-select" id="start-label">Start / 起点</label>
-            <select id="start-select">
-                <option value="">Select Start</option>
-            </select>
+            <label for="start-input" id="start-label">Start / 起点</label>
+            <input type="text" id="start-input" list="nodes-list" placeholder="Select Start">
         </div>
         <div class="control-group">
-            <label for="dest-select" id="dest-label">Destination / 终点</label>
-            <select id="dest-select">
-                <option value="">Select Destination</option>
-            </select>
+            <label for="dest-input" id="dest-label">Destination / 终点</label>
+            <input type="text" id="dest-input" list="nodes-list" placeholder="Select Destination">
         </div>
         <button id="navigate-btn" class="nav-button">Navigate / 导航</button>
+        <datalist id="nodes-list"></datalist>
     </div>
 
     <script src="js/pathfinding.js"></script>
