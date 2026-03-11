@@ -2,12 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIS Level 4 Navigation Placeholder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CIS Level 4 Navigation</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>CIS Level 4 Navigation Placeholder</h1>
-    <p>This is a placeholder page.</p>
-    <p><a href="tools/mapper.html">Go to Map Digitizer Tool</a></p>
+    <header class="app-header">
+        <h1 id="title-text">Level 4 Navigation</h1>
+        <button id="lang-toggle">English / 中文</button>
+    </header>
+
+    <div class="map-container">
+        <canvas id="map-canvas"></canvas>
+    </div>
+
+    <div class="controls-overlay">
+        <div class="control-group">
+            <label for="start-select" id="start-label">Start / 起点</label>
+            <select id="start-select">
+                <option value="">Select Start</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="dest-select" id="dest-label">Destination / 终点</label>
+            <select id="dest-select">
+                <option value="">Select Destination</option>
+            </select>
+        </div>
+        <button id="navigate-btn" class="nav-button">Navigate / 导航</button>
+    </div>
+
+    <script src="js/pathfinding.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
