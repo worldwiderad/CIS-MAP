@@ -1,0 +1,20 @@
+{
+    "en": {
+        "title": "Level 4 Navigation",
+        "start_label": "Start",
+        "dest_label": "Destination",
+        "select_start": "Select Start",
+        "select_dest": "Select Destination",
+        "navigate_btn": "Navigate",
+        "lang_toggle": "中文"
+    },
+    "zh": {
+        "title": "4层导航",
+        "start_label": "起点",
+        "dest_label": "终点",
+        "select_start": "选择起点",
+        "select_dest": "选择终点",
+        "navigate_btn": "导航",
+        "lang_toggle": "English"
+    }
+}
