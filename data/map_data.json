@@ -1,0 +1,721 @@
+{
+  "nodes": [
+    {
+      "id": "Stair-10",
+      "x": 2753,
+      "y": 3323
+    },
+    {
+      "id": "Pod-C-WC",
+      "x": 2619,
+      "y": 3322
+    },
+    {
+      "id": "EW-415",
+      "x": 2538,
+      "y": 3209
+    },
+    {
+      "id": "EW-414",
+      "x": 2928,
+      "y": 3324
+    },
+    {
+      "id": "EW-413",
+      "x": 2993,
+      "y": 3213
+    },
+    {
+      "id": "EW-412",
+      "x": 2991,
+      "y": 3103
+    },
+    {
+      "id": "EW-411",
+      "x": 2866,
+      "y": 3074
+    },
+    {
+      "id": "EW-410",
+      "x": 2615,
+      "y": 3075
+    },
+    {
+      "id": "Pod-C",
+      "x": 2760,
+      "y": 3201
+    },
+    {
+      "id": "Pod-C-entrance",
+      "x": 2704,
+      "y": 3079
+    },
+    {
+      "id": "INS",
+      "x": 2709,
+      "y": 2867
+    },
+    {
+      "id": "Pod-B-entrance",
+      "x": 2713,
+      "y": 2621
+    },
+    {
+      "id": "Pod-B",
+      "x": 2729,
+      "y": 2488
+    },
+    {
+      "id": "Stair-9",
+      "x": 2760,
+      "y": 2314
+    },
+    {
+      "id": "EW-401",
+      "x": 2565,
+      "y": 2318
+    },
+    {
+      "id": "EW-402",
+      "x": 2890,
+      "y": 2316
+    },
+    {
+      "id": "EW-403",
+      "x": 2941,
+      "y": 2405
+    },
+    {
+      "id": "EW-404",
+      "x": 2943,
+      "y": 2563
+    },
+    {
+      "id": "EW-405",
+      "x": 2848,
+      "y": 2644
+    },
+    {
+      "id": "EW-406",
+      "x": 2588,
+      "y": 2645
+    },
+    {
+      "id": "EW-407",
+      "x": 2511,
+      "y": 2520
+    },
+    {
+      "id": "Stair-6",
+      "x": 2273,
+      "y": 2877
+    },
+    {
+      "id": "INS-Chinese",
+      "x": 3336,
+      "y": 2865
+    },
+    {
+      "id": "Chinese-entrance-INS",
+      "x": 3339,
+      "y": 2487
+    },
+    {
+      "id": "Chinese-entrance-INS-close",
+      "x": 3665,
+      "y": 2486
+    },
+    {
+      "id": "Pod-F",
+      "x": 3975,
+      "y": 2346
+    },
+    {
+      "id": "NW-418",
+      "x": 3497,
+      "y": 2513
+    },
+    {
+      "id": "NW-417",
+      "x": 3726,
+      "y": 2512
+    },
+    {
+      "id": "NW-416",
+      "x": 3960,
+      "y": 2508
+    },
+    {
+      "id": "NW-415",
+      "x": 4197,
+      "y": 2509
+    },
+    {
+      "id": "NW-414",
+      "x": 4435,
+      "y": 2507
+    },
+    {
+      "id": "NW-414-access",
+      "x": 4261,
+      "y": 2472
+    },
+    {
+      "id": "NW-413",
+      "x": 4272,
+      "y": 2181
+    },
+    {
+      "id": "NW-412",
+      "x": 3971,
+      "y": 2222
+    },
+    {
+      "id": "NW-419",
+      "x": 3634,
+      "y": 2229
+    },
+    {
+      "id": "NW-420",
+      "x": 3633,
+      "y": 2059
+    },
+    {
+      "id": "NW-421",
+      "x": 3630,
+      "y": 1928
+    },
+    {
+      "id": "Gym-Access",
+      "x": 3734,
+      "y": 1959
+    },
+    {
+      "id": "Gym-Chinese",
+      "x": 3734,
+      "y": 1621
+    },
+    {
+      "id": "Gyn-Cornerpath-Chinese",
+      "x": 3416,
+      "y": 1575
+    },
+    {
+      "id": "NW-410",
+      "x": 3831,
+      "y": 1878
+    },
+    {
+      "id": "NW-408",
+      "x": 3828,
+      "y": 1640
+    },
+    {
+      "id": "Chinese-WC",
+      "x": 3628,
+      "y": 1820
+    },
+    {
+      "id": "Gym-English",
+      "x": 3411,
+      "y": 522
+    },
+    {
+      "id": "Stair-13",
+      "x": 3638,
+      "y": 2421
+    },
+    {
+      "id": "Stair-14",
+      "x": 4287,
+      "y": 2423
+    },
+    {
+      "id": "Chinese-Elevator-Access",
+      "x": 4282,
+      "y": 2270
+    },
+    {
+      "id": "Chinese-Elevator",
+      "x": 4556,
+      "y": 2266
+    },
+    {
+      "id": "Gym-english-access",
+      "x": 3297,
+      "y": 496
+    },
+    {
+      "id": "Gym-english-access-corner",
+      "x": 3289,
+      "y": 734
+    },
+    {
+      "id": "Stair-11",
+      "x": 3426,
+      "y": 477
+    },
+    {
+      "id": "stair-7",
+      "x": 3208,
+      "y": 706
+    },
+    {
+      "id": "Pod-A",
+      "x": 2750,
+      "y": 756
+    },
+    {
+      "id": "WW-403",
+      "x": 2995,
+      "y": 700
+    },
+    {
+      "id": "WW-402",
+      "x": 2737,
+      "y": 709
+    },
+    {
+      "id": "WW-401",
+      "x": 2611,
+      "y": 726
+    },
+    {
+      "id": "WW-417",
+      "x": 2611,
+      "y": 860
+    },
+    {
+      "id": "WW-416",
+      "x": 2615,
+      "y": 972
+    },
+    {
+      "id": "WW-404",
+      "x": 2855,
+      "y": 872
+    },
+    {
+      "id": "English-midpoint-access",
+      "x": 2815,
+      "y": 1015
+    },
+    {
+      "id": "English-Tertiary-Pod",
+      "x": 2794,
+      "y": 1371
+    },
+    {
+      "id": "WW-405",
+      "x": 2855,
+      "y": 1056
+    },
+    {
+      "id": "WW-406",
+      "x": 2854,
+      "y": 1217
+    },
+    {
+      "id": "English-Tertiary-Corner-Access",
+      "x": 2833,
+      "y": 1583
+    },
+    {
+      "id": "WW-408",
+      "x": 2858,
+      "y": 1551
+    },
+    {
+      "id": "WW-409",
+      "x": 2858,
+      "y": 1628
+    },
+    {
+      "id": "Uni-Counciling",
+      "x": 2639,
+      "y": 1473
+    },
+    {
+      "id": "Secondary-Office",
+      "x": 2542,
+      "y": 1359
+    },
+    {
+      "id": "Elevator-Access",
+      "x": 2239,
+      "y": 1383
+    },
+    {
+      "id": "Elevator",
+      "x": 2182,
+      "y": 820
+    },
+    {
+      "id": "EW-409",
+      "x": 2349,
+      "y": 2904
+    }
+  ],
+  "edges": [
+    {
+      "node1": "Elevator-Access",
+      "node2": "English-Tertiary-Pod",
+      "distance": 555
+    },
+    {
+      "node1": "Uni-Counciling",
+      "node2": "English-Tertiary-Pod",
+      "distance": 186
+    },
+    {
+      "node1": "Secondary-Office",
+      "node2": "English-Tertiary-Pod",
+      "distance": 252
+    },
+    {
+      "node1": "English-Tertiary-Pod",
+      "node2": "English-Tertiary-Corner-Access",
+      "distance": 216
+    },
+    {
+      "node1": "English-Tertiary-Corner-Access",
+      "node2": "WW-408",
+      "distance": 41
+    },
+    {
+      "node1": "English-Tertiary-Corner-Access",
+      "node2": "WW-409",
+      "distance": 51
+    },
+    {
+      "node1": "English-Tertiary-Pod",
+      "node2": "WW-406",
+      "distance": 165
+    },
+    {
+      "node1": "English-Tertiary-Pod",
+      "node2": "English-midpoint-access",
+      "distance": 357
+    },
+    {
+      "node1": "English-midpoint-access",
+      "node2": "WW-405",
+      "distance": 57
+    },
+    {
+      "node1": "English-midpoint-access",
+      "node2": "Pod-A",
+      "distance": 267
+    },
+    {
+      "node1": "Pod-A",
+      "node2": "WW-404",
+      "distance": 156
+    },
+    {
+      "node1": "Pod-A",
+      "node2": "WW-416",
+      "distance": 255
+    },
+    {
+      "node1": "WW-417",
+      "node2": "Pod-A",
+      "distance": 174
+    },
+    {
+      "node1": "WW-401",
+      "node2": "Pod-A",
+      "distance": 142
+    },
+    {
+      "node1": "Pod-A",
+      "node2": "WW-402",
+      "distance": 49
+    },
+    {
+      "node1": "Pod-A",
+      "node2": "WW-403",
+      "distance": 251
+    },
+    {
+      "node1": "Gym-english-access-corner",
+      "node2": "Pod-A",
+      "distance": 539
+    },
+    {
+      "node1": "stair-7",
+      "node2": "Gym-english-access-corner",
+      "distance": 86
+    },
+    {
+      "node1": "Gym-english-access-corner",
+      "node2": "Gym-english-access",
+      "distance": 238
+    },
+    {
+      "node1": "Elevator-Access",
+      "node2": "Elevator",
+      "distance": 566
+    },
+    {
+      "node1": "Gym-english-access",
+      "node2": "Gym-English",
+      "distance": 117
+    },
+    {
+      "node1": "Gym-English",
+      "node2": "Stair-11",
+      "distance": 47
+    },
+    {
+      "node1": "Gym-English",
+      "node2": "Gyn-Cornerpath-Chinese",
+      "distance": 1053
+    },
+    {
+      "node1": "Gyn-Cornerpath-Chinese",
+      "node2": "Gym-Chinese",
+      "distance": 321
+    },
+    {
+      "node1": "Gym-Chinese",
+      "node2": "NW-408",
+      "distance": 96
+    },
+    {
+      "node1": "Gym-Chinese",
+      "node2": "Gym-Access",
+      "distance": 338
+    },
+    {
+      "node1": "NW-410",
+      "node2": "Gym-Access",
+      "distance": 126
+    },
+    {
+      "node1": "Gym-Access",
+      "node2": "NW-421",
+      "distance": 109
+    },
+    {
+      "node1": "Chinese-WC",
+      "node2": "Gym-Access",
+      "distance": 175
+    },
+    {
+      "node1": "NW-420",
+      "node2": "Gym-Access",
+      "distance": 142
+    },
+    {
+      "node1": "Gym-Access",
+      "node2": "Chinese-entrance-INS-close",
+      "distance": 531
+    },
+    {
+      "node1": "Chinese-entrance-INS-close",
+      "node2": "Pod-F",
+      "distance": 340
+    },
+    {
+      "node1": "Pod-F",
+      "node2": "NW-412",
+      "distance": 124
+    },
+    {
+      "node1": "Pod-F",
+      "node2": "NW-413",
+      "distance": 340
+    },
+    {
+      "node1": "Chinese-Elevator-Access",
+      "node2": "Pod-F",
+      "distance": 316
+    },
+    {
+      "node1": "Pod-F",
+      "node2": "Stair-14",
+      "distance": 321
+    },
+    {
+      "node1": "Pod-F",
+      "node2": "NW-414-access",
+      "distance": 313
+    },
+    {
+      "node1": "NW-414-access",
+      "node2": "NW-414",
+      "distance": 177
+    },
+    {
+      "node1": "NW-414-access",
+      "node2": "NW-415",
+      "distance": 74
+    },
+    {
+      "node1": "Pod-F",
+      "node2": "NW-416",
+      "distance": 163
+    },
+    {
+      "node1": "Pod-F",
+      "node2": "NW-417",
+      "distance": 299
+    },
+    {
+      "node1": "Chinese-entrance-INS-close",
+      "node2": "NW-418",
+      "distance": 170
+    },
+    {
+      "node1": "Chinese-entrance-INS-close",
+      "node2": "Chinese-entrance-INS",
+      "distance": 326
+    },
+    {
+      "node1": "Stair-13",
+      "node2": "Chinese-entrance-INS-close",
+      "distance": 70
+    },
+    {
+      "node1": "NW-419",
+      "node2": "Pod-F",
+      "distance": 361
+    },
+    {
+      "node1": "Chinese-Elevator-Access",
+      "node2": "Chinese-Elevator",
+      "distance": 274
+    },
+    {
+      "node1": "Chinese-entrance-INS",
+      "node2": "INS-Chinese",
+      "distance": 378
+    },
+    {
+      "node1": "INS-Chinese",
+      "node2": "INS",
+      "distance": 627
+    },
+    {
+      "node1": "INS",
+      "node2": "Pod-C-entrance",
+      "distance": 212
+    },
+    {
+      "node1": "INS",
+      "node2": "Pod-B-entrance",
+      "distance": 246
+    },
+    {
+      "node1": "Pod-C-entrance",
+      "node2": "Pod-C",
+      "distance": 134
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "Stair-10",
+      "distance": 122
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "Pod-C-WC",
+      "distance": 186
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "EW-415",
+      "distance": 222
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "EW-410",
+      "distance": 192
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "EW-411",
+      "distance": 165
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "EW-412",
+      "distance": 251
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "EW-413",
+      "distance": 233
+    },
+    {
+      "node1": "Pod-C",
+      "node2": "EW-414",
+      "distance": 208
+    },
+    {
+      "node1": "Pod-B-entrance",
+      "node2": "EW-406",
+      "distance": 127
+    },
+    {
+      "node1": "Pod-B-entrance",
+      "node2": "EW-407",
+      "distance": 226
+    },
+    {
+      "node1": "Pod-B-entrance",
+      "node2": "EW-401",
+      "distance": 337
+    },
+    {
+      "node1": "Stair-9",
+      "node2": "Pod-B-entrance",
+      "distance": 311
+    },
+    {
+      "node1": "Pod-B-entrance",
+      "node2": "Pod-B",
+      "distance": 134
+    },
+    {
+      "node1": "Pod-B",
+      "node2": "Stair-9",
+      "distance": 177
+    },
+    {
+      "node1": "Pod-B",
+      "node2": "EW-402",
+      "distance": 236
+    },
+    {
+      "node1": "EW-403",
+      "node2": "Pod-B",
+      "distance": 228
+    },
+    {
+      "node1": "EW-404",
+      "node2": "Pod-B",
+      "distance": 227
+    },
+    {
+      "node1": "Pod-B-entrance",
+      "node2": "EW-405",
+      "distance": 137
+    },
+    {
+      "node1": "Pod-B",
+      "node2": "EW-401",
+      "distance": 236
+    },
+    {
+      "node1": "INS",
+      "node2": "Stair-6",
+      "distance": 436
+    },
+    {
+      "node1": "Stair-6",
+      "node2": "EW-409",
+      "distance": 81
+    }
+  ]
+}
